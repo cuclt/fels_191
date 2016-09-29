@@ -21,3 +21,15 @@
 
 en:
   hello: "Hello world"
+  title: "E-Learning System"
+  home: "Home"
+  signin: "Sign in"
+  signup: "Sign up"
+  signup_now: "Sign up now!"
+  or: "or"
+  forgot_password: "Forgot Password?"
+  remember_me: "Remember me"
+  email: "Email"
+  password: "Password"
+  copy: "2016"
+  website: "Website"
