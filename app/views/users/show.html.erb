@@ -1,0 +1,12 @@
+<% provide :title, t("signup") %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h1>
+        <%= gravatar_for @user %>
+        <%= @user.name %><br/>
+        <%= @user.email %><br/>
+      </h1>
+    </section>
+  </aside>
+</div>
