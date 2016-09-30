@@ -18,7 +18,6 @@ ActiveRecord::Schema.define(version: 20160929031953) do
     t.integer  "question_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.index ["question_id", "created_at"], name: "index_answers_on_question_id_and_created_at"
     t.index ["question_id"], name: "index_answers_on_question_id"
   end
 
@@ -36,7 +35,6 @@ ActiveRecord::Schema.define(version: 20160929031953) do
     t.integer  "category_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.index ["category_id", "created_at"], name: "index_lessons_on_category_id_and_created_at"
     t.index ["category_id"], name: "index_lessons_on_category_id"
     t.index ["user_id"], name: "index_lessons_on_user_id"
   end
@@ -54,9 +52,7 @@ ActiveRecord::Schema.define(version: 20160929031953) do
     t.integer  "question_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.index ["lesson_id", "created_at"], name: "index_results_on_lesson_id_and_created_at"
     t.index ["lesson_id"], name: "index_results_on_lesson_id"
-    t.index ["question_id", "created_at"], name: "index_results_on_question_id_and_created_at"
     t.index ["question_id"], name: "index_results_on_question_id"
   end
 
