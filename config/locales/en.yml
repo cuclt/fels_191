@@ -33,3 +33,4 @@ en:
   password: "Password"
   copy: "2016"
   website: "Website"
+  error_login: "Invalid email/password combination"

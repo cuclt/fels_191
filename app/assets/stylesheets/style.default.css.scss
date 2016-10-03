@@ -49,10 +49,10 @@ h1 {
 }
 #top ul.menu {
   padding-left: 0;
-  margin: 10px 0;
   text-align: right;
   font-size: 12px;
   list-style: none;
+  margin: 0;
 }
 @media (max-width: 991px) {
   #top ul.menu {
@@ -1808,4 +1808,14 @@ ul.users li a{
 }
 .title {
   font-weight: bold;
+}
+.fa-caret-down {
+  color: #fff;
+}
+.img-circle {
+  width: 45px;
+  height: 45px;
+}
+.menu {
+  margin: 0;
 }

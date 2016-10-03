@@ -8,7 +8,7 @@
         <h4 class="modal-title text-center" id="Login"><%= t "signin" %></h4>
       </div>
       <div class="modal-body">
-        <%= form_for "#" do |f| %>
+        <%= form_for :session, url: login_path do |f| %>
           <div class="form-group">
             <%= f.email_field :email, class: "form-control",
               placeholder: t("email")  %>
