@@ -23,7 +23,6 @@ ActiveRecord::Schema.define(version: 20160929031953) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "title"
-    t.string   "string"
     t.integer  "question_number"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false

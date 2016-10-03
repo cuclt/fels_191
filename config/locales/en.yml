@@ -41,3 +41,7 @@ en:
   signup_first: "You can sign up or sign in first"
   urlavt: "https://secure.gravatar.com/avatar/#{gravatar_id}"
   create_account: "Create my account"
+  categories: "Categories"
+  not_login: "Please login."
+  start_lession: "Start"
+  title_category: "Title"
