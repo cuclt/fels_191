@@ -22,11 +22,10 @@
           </ul>
         </li>
       <% else %>
-        <li><%= link_to t("signup"), "#", class: "btn btn-success btn-sm" %></li>
+        <li><%= link_to t("signup"), signup_path, class: "btn btn-success btn-sm" %></li>
         <li>
           <%= link_to t("signin"), "#", class: "btn btn-success btn-sm",
             data: {toggle: "modal", target: "#login-modal"} %>
-          </a>
         </li>
       <% end %>
     </ul>
