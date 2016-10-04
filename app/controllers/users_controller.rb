@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   before_action :load_user, only: :show
 
   def index
+    @users = User.newest.paginate page: params[:page], per_page: Settings.per_page
   end
 
   def show
