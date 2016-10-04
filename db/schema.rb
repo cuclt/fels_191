@@ -49,8 +49,10 @@ ActiveRecord::Schema.define(version: 20160929031953) do
   create_table "results", force: :cascade do |t|
     t.integer  "lesson_id"
     t.integer  "question_id"
+    t.integer  "answer_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.index ["answer_id"], name: "index_results_on_answer_id"
     t.index ["lesson_id"], name: "index_results_on_lesson_id"
     t.index ["question_id"], name: "index_results_on_question_id"
   end

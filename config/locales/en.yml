@@ -45,3 +45,6 @@ en:
   not_login: "Please login."
   start_lession: "Start"
   title_category: "Title"
+  user_info: "You have finished: "
+  categories: " categories"
+  words: " words"

@@ -2,11 +2,10 @@
 <div class="row">
   <aside class="col-md-4">
     <section class="user_info">
-      <h1>
-        <%= gravatar_for @user %>
-        <%= @user.name %><br/>
-        <%= @user.email %><br/>
-      </h1>
-    </section>
+      <p><em><%= gravatar_for @user %></em><br>
+      <strong><%= @user.name %></strong><br>
+      <code><%= @user.email %></code></p><br>
+      <samp><%= t "user_info" %><%= @count_word %><%= t "words" %></samp><br>
+      <samp><%= t "user_info" %><%= @user_lessons.length %><%= t "categories" %></samp><br>
   </aside>
 </div>
