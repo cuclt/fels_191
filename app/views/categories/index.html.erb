@@ -25,8 +25,10 @@
                 @categories.current_page %>
               </td>
               <td><%= category.title %></td>
-              <td><%= link_to t("start_lession"), "#",
-                class: "btn btn-primary btn-sm" %>
+              <td>
+                <%= form_for [category, @lesson] do |f| %>
+                  <%= f.submit t("start_lesson"), class: "btn btn-primary btn-sm" %>
+                <% end %>
               </td>
             </tr>
           <% end %>

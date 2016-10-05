@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   post "login" => "sessions#create"
   delete "logout" => "sessions#destroy"
   get "users/new"
-
-  root "static_pages#home"
   get "signup"  => "users#new"
   resources :users
-  resources :categories, only: :index
+  resources :categories, only: :index do
+    resources :lessons, only: :create
+  end
 end
