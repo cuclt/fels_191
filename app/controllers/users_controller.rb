@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @count_word = Result.count_correct_answer @user
+    @results = @user.results.correct_anwsers
     @user_lessons = @user.lessons
   end
 
