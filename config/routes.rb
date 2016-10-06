@@ -8,4 +8,8 @@ Rails.application.routes.draw do
   resources :categories, only: :index do
     resources :lessons, only: :create
   end
+  resources :results do
+    resources :user, only: :index
+  end
+  resources :categories, only: :index
 end

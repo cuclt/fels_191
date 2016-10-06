@@ -52,3 +52,11 @@ en:
   all_user: "All user"
   lesson: "Lesson"
   fail_message: "Something went wrong!"
+  all_word: "List of word"
+  time: "Time: "
+  word: "Word: "
+  user_empty: "Counld not find user"
+  pirate:
+  time:
+    formats:
+      default: "%Y-%m-%d %H:%M:%S"

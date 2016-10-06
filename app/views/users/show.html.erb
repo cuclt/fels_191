@@ -5,7 +5,8 @@
       <p><em><%= gravatar_for @user %></em><br>
       <strong><%= @user.name %></strong><br>
       <code><%= @user.email %></code></p><br>
-      <samp><%= t "user_info" %><%= @count_word %><%= t "words" %></samp><br>
+      <samp><%= t "user_info" %><%= @results.length %></samp>
+      <%= link_to t("words"), result_path(@user) %><br>
       <samp><%= t "user_info" %><%= @user_lessons.length %><%= t "categories" %></samp><br>
   </aside>
 </div>
