@@ -1,4 +1,5 @@
 class Answer < ApplicationRecord
   belongs_to :question
-  belongs_to :result
+  has_many :results
+  has_many :lessons, through: :results
 end
