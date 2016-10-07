@@ -1,6 +1,6 @@
 class LessonsController < ApplicationController
-  before_action :logged_in_user, only: [:create, :edit, :update]
-  before_action :load_lesson, only: [:edit, :update]
+  before_action :logged_in_user, except: [:new, :index, :destroy]
+  before_action :load_lesson, only: [:edit, :update, :show]
 
   def create
     @category = Category.find_by id: params[:category_id]
@@ -20,10 +20,16 @@ class LessonsController < ApplicationController
   def update
     if @lesson.update_attributes lesson_params
       flash[:success] = t "done_lesson"
+      redirect_to category_lesson_path
     else
       flash[:danger] = t "fail_message"
+      redirect_to categories_path
     end
-    redirect_to categories_path
+  end
+
+  def show
+    @score = @lesson.results.correct_anwsers.size
+    @results = @lesson.results
   end
 
   private
@@ -37,6 +43,6 @@ class LessonsController < ApplicationController
 
   def lesson_params
     params.require(:lesson).permit :category_id,
-      results_attributes: [:id, :question_id, :answer_id]
+      results_attributes: [:id, :answer_id]
   end
 end

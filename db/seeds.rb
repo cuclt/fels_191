@@ -21,7 +21,6 @@ end
   Question.create! name: name, category_id: category_id
   3.times do |answer|
     answer == 1 ? is_correct = "true" : is_correct = "false"
-    answer == 1 ? is_correct = "true" : is_correct = "true"
     Answer.create! name: "Answer#{answer}", is_correct: is_correct,
       question_id: "#{question + 1}"
   end
@@ -29,8 +28,7 @@ end
 5.times do
   user_id = Random.rand(4) + 1
   category_id = Random.rand(4) + 1
-  scores = Random.rand(9) + 1
-  Lesson.create!(user_id: user_id, category_id: category_id, scores: scores)
+  Lesson.create!(user_id: user_id, category_id: category_id)
 end
 
 5.times do
