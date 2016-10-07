@@ -1,4 +1,4 @@
-User.create! name:  "Cuc Le", email: "cuc@gmail.com", password: "123456",
+user_id.create! name:  "Cuc Le", email: "cuc@gmail.com", password: "123456",
   password_confirmation: "123456", is_admin: true
 
 49.times do |n|
@@ -15,7 +15,7 @@ end
   Category.create!(title: title, question_number: question_number)
 end
 
-150.times do |question|
+50.times do |question|
   name = "Question#{question + 1}"
   category_id = Random.rand(4) + 1
   Question.create! name: name, category_id: category_id
@@ -26,6 +26,7 @@ end
       question_id: "#{question + 1}"
   end
 end
+
 5.times do
   user_id = Random.rand(4) + 1
   category_id = Random.rand(4) + 1
