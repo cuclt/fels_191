@@ -46,12 +46,11 @@ en:
   start_lesson: "Start"
   title_category: "Title"
   user_info: "You have finished: "
-  categories: " categories"
   words: " words"
   user: "User"
   all_user: "All user"
   lesson: "Lesson"
-  fail_message: "Something went wrong!"
+  fail_message: "Something went wrong. Please learn other lesson!"
   all_word: "List of word"
   time: "Time: "
   word: "Word: "
@@ -60,3 +59,8 @@ en:
   time:
     formats:
       default: "%Y-%m-%d %H:%M:%S"
+
+  finish: "Finish"
+  lesson_not_found: "Lesson not found!"
+  done_lesson: "Done lesson!"
+

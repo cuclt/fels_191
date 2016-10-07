@@ -15,17 +15,13 @@ end
   Category.create!(title: title, question_number: question_number)
 end
 
-<<<<<<< HEAD
 150.times do |question|
-50.times do |question|
-  view list word
   name = "Question#{question + 1}"
   category_id = Random.rand(4) + 1
   Question.create! name: name, category_id: category_id
   3.times do |answer|
     answer == 1 ? is_correct = "true" : is_correct = "false"
     answer == 1 ? is_correct = "true" : is_correct = "true"
-    view list word
     Answer.create! name: "Answer#{answer}", is_correct: is_correct,
       question_id: "#{question + 1}"
   end
