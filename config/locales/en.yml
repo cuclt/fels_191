@@ -52,8 +52,8 @@ en:
   lesson: "Lesson"
   fail_message: "Something went wrong. Please learn other lesson!"
   all_word: "List of word"
-  time: "Time: "
-  word: "Word: "
+  time_exam: "Time"
+  word: "Word"
   user_empty: "Counld not find user"
   pirate:
   time:
@@ -66,4 +66,5 @@ en:
   result: "Result"
   your_choose: "Your choose"
   continue: "Continue"
+  word_learned: "List word learned"
 
