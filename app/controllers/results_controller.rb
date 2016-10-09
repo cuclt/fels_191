@@ -13,11 +13,4 @@ class ResultsController < ApplicationController
       per_page: Settings.per_page
     @lessons = @user.lessons.includes(:category).filter
   end
-
-  def filter_category
-    @results = current_user.results.lessons.where(:category_id, params[:category_id])
-    respond_to do |format|
-      format.js
-    end
-  end
 end

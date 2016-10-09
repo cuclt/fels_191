@@ -1,0 +1,38 @@
+<div class="col-sm-12">
+  <ul class="breadcrumb">
+    <li><%= link_to t("home"), admin_root_path %></li>
+    <li><%= t "users" %></li>
+  </ul>
+</div>
+<%= render "admin/layouts/left_bar" %>
+<div class="col-sm-9">
+  <div class="row box">
+    <h2>
+      <%= t "users" %>
+    </h2>
+    <div class="table-bordered">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th><%= t "users" %></th>
+            <th><%= t "name" %></th>
+            <th colspan="2"><%= t "email" %></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @users.each_with_index do |user, index| %>
+            <tr>
+              <td>#<%= index + 1 %></td>
+              <td><%= user.name %></td>
+              <td><%= user.email %></td>
+              <td><%= link_to t("delete"), admin_user_path(user.id), method: :delete, class: "btn btn-danger btn-sm", data: {confirm: "You sure?"} %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+    <div class="pull-right">
+      <%= will_paginate @users %>
+    </div>
+  </div>
+</div>

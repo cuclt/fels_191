@@ -1722,14 +1722,6 @@ ul.users {
   margin: 0;
 }
 
-ul.users li {
-  overflow: auto !important;
-  padding: 10px 0 !important;
-  border-bottom: 1px solid #eeeeee !important;
-}
-ul.users li a{
-  float: left;
-}
 .gravatar {
   float: left;
   margin-right: 10px;
@@ -1917,6 +1909,8 @@ input {
 .filter-categories:hover {
   background-color: white !important;
 }
-
+.menu .fullname {
+  font-size: 18px;
+}
 
 

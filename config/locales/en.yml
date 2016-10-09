@@ -47,7 +47,7 @@ en:
   title_category: "Title"
   user_info: "You have finished: "
   words: " words"
-  user: "User"
+  users: "Users"
   all_user: "All user"
   lesson: "Lesson"
   fail_message: "Something went wrong. Please learn other lesson!"
@@ -67,4 +67,9 @@ en:
   your_choose: "Your choose"
   continue: "Continue"
   word_learned: "List word learned"
-
+  admin:
+    manage: "Manage"
+    edit: "Edit"
+    delete: "Delete"
+    user:
+      user_not_found: "User not found!"

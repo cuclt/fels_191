@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    root "static_pages#home"
+    resources :categories
+    resources :users, only: [:index, :destroy]
+  end
   root "static_pages#home"
   post "login" => "sessions#create"
   delete "logout" => "sessions#destroy"
-  get "users/new"
   get "signup"  => "users#new"
   resources :users
   resources :categories, only: :index do
@@ -11,5 +15,5 @@ Rails.application.routes.draw do
   resources :results do
     resources :user, only: :index
   end
-  resources :categories, only: :index
+
 end
