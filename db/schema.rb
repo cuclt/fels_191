@@ -29,7 +29,6 @@ ActiveRecord::Schema.define(version: 20160929031953) do
   end
 
   create_table "lessons", force: :cascade do |t|
-    t.integer  "scores"
     t.integer  "user_id"
     t.integer  "category_id"
     t.datetime "created_at",  null: false

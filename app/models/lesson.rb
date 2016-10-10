@@ -11,8 +11,7 @@ class Lesson < ApplicationRecord
 
   before_create :lesson_results
   accepts_nested_attributes_for :results,
-    reject_if: proc {|attributes| attributes[:answer_id].blank? ||
-      attributes[:user_id].blank? || attributes[:question_id].blank?},
+    reject_if: proc {|attributes| attributes[:answer_id].blank?},
     allow_destroy: true
 
   private
