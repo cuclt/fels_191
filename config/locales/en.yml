@@ -52,9 +52,9 @@ en:
   lesson: "Lesson"
   fail_message: "Something went wrong. Please learn other lesson!"
   all_word: "List of word"
-  time: "Time: "
-  word: "Word: "
-  user_empty: "Counld not find user"
+  time_exam: "Time"
+  word: "Word"
+  user_empty: "User not found!"
   pirate:
   time:
     formats:
@@ -67,4 +67,5 @@ en:
   your_choose: "Your choose"
   continue: "Continue"
   category_not_found: "Category not found!"
+  word_learned: "List word learned"
 
