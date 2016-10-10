@@ -13,7 +13,9 @@
           <% @categories.each do |category| %>
             <tr>
               <td>#<%= category.id %></td>
-              <td><%= category.title %></td>
+              <td>
+                  <%= link_to category.title, admin_category_questions_path(category.id, @question) %>
+              </td>
               <td><%= link_to t("edit"), "#", class: "btn btn-primary btn-sm" %></td>
               <td><%= link_to t("delete"), "#", class: "btn btn-danger btn-sm" %></td>
             </tr>

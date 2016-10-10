@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   namespace :admin do
     root "static_pages#home"
-    resources :categories
+    resources :categories do
+      resources :questions, only: [:index, :edit, :update, :delete]
+    end
     resources :users, only: [:index, :destroy]
   end
   root "static_pages#home"

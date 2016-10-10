@@ -73,3 +73,9 @@ en:
     delete: "Delete"
     user:
       user_not_found: "User not found!"
+    question:
+      questions: "Questions"
+      question_name: "Question name"
+      question_not_found: "Question not found!"
+    category:
+      category_not_found: "Category not found!"

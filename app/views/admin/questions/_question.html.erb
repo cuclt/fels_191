@@ -1,0 +1,9 @@
+<% @questions.each_with_index do |question, index| %>
+  <tr>
+    <td>#<%= current_index Settings.per_page, index,
+      @questions.current_page %></td>
+    <td><%= question.name %></td>
+    <td><%= link_to t("edit"), edit_admin_category_question_path(question.id), class: "btn btn-primary btn-sm" %></td>
+    <td><%= link_to t("delete"), "#", method: :delete, class: "btn btn-danger btn-sm", data: {confirm: "You sure?"} %></td>
+  </tr>
+<% end %>

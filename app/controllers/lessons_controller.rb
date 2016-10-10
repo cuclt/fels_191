@@ -1,5 +1,5 @@
 class LessonsController < ApplicationController
-  before_action :logged_in_user, except: [:new, :index, :destroy]
+  before_action :logged_in_user
   before_action :load_lesson, only: [:edit, :update, :show]
 
   def create
