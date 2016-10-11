@@ -5,9 +5,7 @@
   <div class="col-md-6" data-animate="fadeInDown">
     <ul class="menu">
       <% if logged_in? %>
-        <li>
-          <%= link_to t("user"), users_path %>
-        </li>
+        <li><%= link_to current_user.name, current_user %></li>
         <li class="dropdown">
           <%= link_to "#", class: "dropdown-toggle", "data-toggle": "dropdown" do %>
             <% if @current_user.avatar.nil? %>
@@ -18,11 +16,11 @@
             <span class="caret"></span>
           <% end %>
           <ul class="dropdown-menu">
-            <li><%= link_to t("manager"), admin_root_path %></li>
-            <li><%= link_to t("profile"), "#" %></li>
+            <li><%= link_to t("user"), users_path %></li>
             <li><%= link_to t("settings"), "#" %></li>
             <% if @current_user.is_admin? %>
               <li><%= link_to t("manager"), admin_root_path %></li>
+              <li><%= link_to t("create_question"), new_admin_question_path %></li>
             <% end %>
             <li class="divider"></li>
             <li><%= link_to t("logout"), logout_path, method: "delete" %></li>

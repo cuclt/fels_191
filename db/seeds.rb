@@ -1,4 +1,4 @@
-user_id.create! name:  "Cuc Le", email: "cuc@gmail.com", password: "123456",
+User.create! name:  "Cuc Le", email: "cuc@gmail.com", password: "123456",
   password_confirmation: "123456", is_admin: true
 
 49.times do |n|

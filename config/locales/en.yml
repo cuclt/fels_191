@@ -55,6 +55,9 @@ en:
   time_exam: "Time"
   word: "Word"
   user_empty: "User not found!"
+  times: "Time: "
+  word: "Word: "
+  user_empty: "Counld not find user"
   pirate:
   time:
     formats:
@@ -87,3 +90,11 @@ en:
   error_explanation: "error_explanation"
   error_msg: "The form contains"
   user_is_not_admin: "You are not admin"
+  question_name: "Question name"
+  category: "Category"
+  answer_name: "Answer name"
+  is_correct: "Is correct"
+  save: "Save"
+  saved: "Saved"
+  save_not_success: "Save not successfully"
+  create_question: "Create question"
