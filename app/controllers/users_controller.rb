@@ -29,12 +29,4 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit :name, :email, :password
   end
-
-  def load_user
-    @user = User.find_by id: params[:id]
-    unless @user
-      flash[:danger] = t "signup_first"
-      redirect_to root_path
-    end
-  end
 end

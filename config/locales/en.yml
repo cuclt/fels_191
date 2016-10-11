@@ -47,7 +47,7 @@ en:
   title_category: "Title"
   user_info: "You have finished: "
   words: " words"
-  user: "User"
+  users: "Users"
   all_user: "All user"
   lesson: "Lesson"
   fail_message: "Something went wrong. Please learn other lesson!"
@@ -71,11 +71,9 @@ en:
   continue: "Continue"
   category_not_found: "Category not found!"
   word_learned: "List word learned"
-
   edit: "Edit"
   delete: "Delete"
   categories_manager: "Categories Manager"
-  admin: "Admin"
   delete_successfully: "Delete successfully"
   delete_not_successfully: "Delete not successfully"
   category_not_exist: "Category not exist"
@@ -98,3 +96,11 @@ en:
   saved: "Saved"
   save_not_success: "Save not successfully"
   create_question: "Create question"
+  word_learned: "List word learned"
+  admin:
+    manage: "Manage"
+    edit: "Edit"
+    delete: "Delete"
+    confirm_del: "You sure?"
+    user:
+      user_not_found: "User not found!"

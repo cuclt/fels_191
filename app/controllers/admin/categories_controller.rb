@@ -1,7 +1,7 @@
 class Admin::CategoriesController < ApplicationController
-  before_action :load_category, only: [:destroy, :update, :edit]
   before_action :logged_in_user
   before_action :verify_admin
+  before_action :load_category, only: [:destroy, :update, :edit]
 
   def index
     @categories = Category.newest.paginate page: params[:page],
@@ -32,13 +32,6 @@ class Admin::CategoriesController < ApplicationController
   private
   def category_params
     params.require(:category).permit :title, :question_number
-  end
-
-  def verify_admin
-    unless current_user.is_admin?
-      redirect_to root_path
-      flash[:success] = t "user_is_not_admin"
-    end
   end
 
   def load_category

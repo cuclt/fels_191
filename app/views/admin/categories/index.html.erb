@@ -1,43 +1,31 @@
-<% provide :title, t("categories") %>
 <div class="col-sm-12">
   <ul class="breadcrumb">
-    <li><%= link_to t("home"), root_path %></li>
-    <li><%= t "admin" %></li>
-    <li><%= t "categories" %></li>
+    <li><%= link_to t("admin.manage"), admin_root_path %></li>
+    <li><%= t "catrgories" %></li>
   </ul>
 </div>
-<div class="col-md-12" id="customer-order">
-  <div class="box">
-    <h2><%= t "categories_manager" %></h2>
-    <hr>
-    <div class="table-responsive">
-      <table class="table">
-        <thead>
-          <tr>
-            <th><%= t "categories" %></th>
-            <th><%= t "title_category" %></th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          <% @categories.each_with_index do |category, index| %>
+<%= render "admin/layouts/left_bar" %>
+<div class="col-sm-9">
+  <div class="row box">
+    <div class="col-sm-12">
+      <h3 class="pull-left"><%= t "categories" %></h3>
+    </div>
+    <div class="col-sm-12">
+      <div class="table-bordered">
+        <table class="table table-striped">
+          <thead>
             <tr>
-              <td>#<%= current_index Settings.per_page, index,
-                @categories.current_page %>
-              </td>
-              <td><%= category.title %></td>
-              <td>
-                <%= link_to t("edit"), edit_admin_category_path(category.id),
-                  class: "btn btn-primary btn-sm" %>
-              </td>
-              <td>
-                <%= link_to t("Delete"), admin_category_path(category.id), method: :delete,
-                  class: "btn btn-primary btn-sm" %>
-              </td>
+              <th><%= t "categories" %></th>
+              <th colspan="3"><%= t "title_category" %></th>
             </tr>
-          <% end %>
-        </tbody>
-      </table>
+          </thead>
+          <tbody id="result_search">
+            <% @categories.each_with_index do |category, index| %>
+              <%= render category, index: index %>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
       <div class="pull-right">
         <%= will_paginate @categories %>
       </div>
