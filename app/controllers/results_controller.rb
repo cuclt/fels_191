@@ -8,7 +8,8 @@ class ResultsController < ApplicationController
       flash[:danger] = t "user_empty"
       redirect_to root_path
     end
-    @results = @user.results.correct_anwsers.paginate page: params[:page],
-      per_page: Settings.per_page
+    @results = @user.results.correct_anwsers.search_by_condition(params[:search])
+      .paginate page: params[:page], per_page: Settings.per_page
+    @lessons = @user.lessons.includes(:category).uniq_by_category
   end
 end

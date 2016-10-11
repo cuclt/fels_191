@@ -6,6 +6,10 @@ class Lesson < ApplicationRecord
   has_many :questions, through: :results
   has_many :answers, through: :results
 
+  delegate :title, to: :category
+
+  scope :uniq_by_category, ->{select "DISTINCT category_id"}
+
   validates :user, presence: true
   validates :category, presence: true
 

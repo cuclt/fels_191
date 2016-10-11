@@ -1905,3 +1905,15 @@ input {
     color: $state-danger-text;
   }
 }
+
+/*#search*/
+.result-item {
+  margin-top: 20px;
+}
+.filter-categories {
+  height: 34px;
+  border-radius: 0 !important;
+}
+.filter-categories:hover {
+  background-color: white !important;
+}

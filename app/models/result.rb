@@ -7,4 +7,9 @@ class Result < ApplicationRecord
   scope :correct_anwsers, -> do
     joins(:answer).where("answers.is_correct = ?", true)
   end
+
+  scope :search_by_condition, ->category_id do
+    joins("INNER JOIN lessons ON results.lesson_id = lessons.id")
+      .where "lessons.category_id = ?", category_id
+  end
 end
