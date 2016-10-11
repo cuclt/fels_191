@@ -68,10 +68,10 @@ h1 {
 #top ul.menu > .active {
   color: #999999;
 }
-#top #login-modal .modal-header {
+.modal-header {
   background: #4fbfa8;
 }
-#top #login-modal .modal-header h4 {
+.modal-header h4 {
   color: #fff;
 }
 #top #login-modal a {
@@ -1918,4 +1918,12 @@ input {
 }
 .menu .fullname {
   font-size: 18px;
+}
+.nopadding {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.alert {
+  margin-left: 15px;
+  margin-right: 15px;
 }

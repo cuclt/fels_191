@@ -37,7 +37,7 @@ en:
   website: "Website"
   error_login: "Invalid email/password combination"
   welcome: "Welcome to the page!"
-  error_massages: "Sign up fail, pleasa try it aganin!"
+  error_massages: "Sign up fail, please try it again!"
   signup_first: "You can sign up or sign in first"
   urlavt: "https://secure.gravatar.com/avatar/#{gravatar_id}"
   create_account: "Create my account"
@@ -55,8 +55,6 @@ en:
   time_exam: "Time"
   word: "Word"
   user_empty: "User not found!"
-  times: "Time: "
-  word: "Word: "
   user_empty: "Counld not find user"
   pirate:
   time:
@@ -97,6 +95,10 @@ en:
   save_not_success: "Save not successfully"
   create_question: "Create question"
   word_learned: "List word learned"
+  category_not_found: "Category not found!"
+  word_learned: "List word learned"
+  search: "Search..."
+  create: "Create"
   admin:
     manage: "Manage"
     edit: "Edit"
@@ -107,3 +109,8 @@ en:
   add_answer: "Add answer"
   remove_answer: "Remote answer"
   profile_updated: "Profile updated"
+    category:
+      category_successfully: "Category create successfully!"
+      category_error_create: "Something went wrong!"
+      new_category: "New Category"
+      question_number: "Number of question"

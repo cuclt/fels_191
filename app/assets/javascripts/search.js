@@ -4,3 +4,8 @@ $(document).on('change', '#category_id', function() {
     null, 'script');
   return false;
 });
+$(document).on('keyup', 'input#search', function() {
+  $.get($('#admin_search').attr('action'), $('#admin_search').serialize(),
+    null, 'script');
+  return false;
+});
