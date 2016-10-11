@@ -9,4 +9,19 @@ class ApplicationController < ActionController::Base
       redirect_to root_path
     end
   end
+
+  def verify_admin
+    unless current_user.is_admin?
+      redirect_to root_path
+      flash[:success] = t "user_is_not_admin"
+    end
+  end
+
+  def load_user
+    @user = User.find_by id: params[:id]
+    unless @user
+      flash[:danger] = t "signup_first"
+      redirect_to admin_root_path
+    end
+  end
 end

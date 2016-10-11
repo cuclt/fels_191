@@ -11,6 +11,10 @@ class User < ApplicationRecord
   validates :password, presence: true, length: {minimum: 6}, allow_nil: true
   scope :newest, -> {order created_at: :desc}
 
+  def is_user? user
+    self == user
+  end
+
   private
   def downcase_email
     self.email = email.downcase
