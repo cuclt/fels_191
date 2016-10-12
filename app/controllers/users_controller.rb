@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-  before_action :load_user, only: :show
+  before_action :load_user, only: [:show, :edit, :update]
+  before_action :correct_user, only: [:edit, :update]
 
   def index
     @users = User.newest.paginate page: params[:page], per_page: Settings.per_page
@@ -12,6 +13,18 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
+  end
+
+  def edit
+  end
+
+  def update
+    if @user.update_attributes user_params
+      flash[:success] = t "profile_updated"
+      redirect_to @user
+    else
+      render :edit
+    end
   end
 
   def create
@@ -28,5 +41,13 @@ class UsersController < ApplicationController
   private
   def user_params
     params.require(:user).permit :name, :email, :password
+  end
+
+  def correct_user
+    @user = User.find_by id: params[:id]
+    unless @user.is_user? current_user
+      flash[:danger] = t "signup_first"
+      redirect_to root_url
+    end
   end
 end

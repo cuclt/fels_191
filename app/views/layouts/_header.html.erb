@@ -6,7 +6,7 @@
     <ul class="menu">
       <% if logged_in? %>
         <li>
-          <%= link_to @current_user.name, users_path, class: "fullname" %>
+          <%= link_to @current_user.name, current_user, class: "fullname" %>
         </li>
         <li class="dropdown">
           <%= link_to "#", class: "dropdown-toggle", "data-toggle": "dropdown" do %>
@@ -18,8 +18,8 @@
             <span class="caret"></span>
           <% end %>
           <ul class="dropdown-menu">
-            <li><%= link_to t("profile"), users_path %></li>
-            <li><%= link_to t("settings"), "#" %></li>
+            <li><%= link_to t("user"), users_path %></li>
+            <li><%= link_to t("settings"), edit_user_path(current_user) %></li>
             <% if @current_user.is_admin? %>
               <li><%= link_to t("manager"), admin_root_path %></li>
               <li><%= link_to t("create_question"), new_admin_question_path %></li>

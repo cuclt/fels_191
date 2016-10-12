@@ -104,3 +104,6 @@ en:
     confirm_del: "You sure?"
     user:
       user_not_found: "User not found!"
+  add_answer: "Add answer"
+  remove_answer: "Remote answer"
+  profile_updated: "Profile updated"
