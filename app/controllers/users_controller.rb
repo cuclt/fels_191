@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :load_user, only: [:show, :edit, :update]
-  before_action :correct_user, only: [:edit, :update]
+  before_action :correct_user, only: [:show, :edit, :update]
 
   def index
     @users = User.newest.paginate page: params[:page], per_page: Settings.per_page
@@ -46,8 +46,8 @@ class UsersController < ApplicationController
   def correct_user
     @user = User.find_by id: params[:id]
     unless @user.is_user? current_user
-      flash[:danger] = t "signup_first"
-      redirect_to root_url
+      flash[:danger] = t "access_denied"
+      redirect_to :back
     end
   end
 end
