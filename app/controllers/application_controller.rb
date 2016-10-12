@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
   def verify_admin
     unless current_user.is_admin?
       redirect_to root_path
-      flash[:success] = t "user_is_not_admin"
+      flash[:danger] = t "user_is_not_admin"
     end
   end
 

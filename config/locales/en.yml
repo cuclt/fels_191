@@ -21,10 +21,15 @@
 
 en:
   hello: "Hello world"
+  wellcom: "Wellcom to E-Learning System!"
+  please_signin: "Please signin!"
+  user_start: "Start lesson"
+  access_denied: "Access denied!"
   title: "E-Learning System"
   home: "Home"
   signin: "Sign in"
   signup: "Sign up"
+  edit_profile: "Edit profile"
   signup_now: "Sign up now!"
   or: "or"
   forgot_password: "Forgot Password?"
@@ -55,8 +60,6 @@ en:
   time_exam: "Time"
   word: "Word"
   user_empty: "User not found!"
-  user_empty: "Counld not find user"
-  pirate:
   time:
     formats:
       default: "%Y-%m-%d %H:%M:%S"
@@ -99,6 +102,9 @@ en:
   word_learned: "List word learned"
   search: "Search..."
   create: "Create"
+  add_answer: "Add answer"
+  remove_answer: "Remote answer"
+  profile_updated: "Profile updated"
   admin:
     manage: "Manage"
     edit: "Edit"
@@ -106,9 +112,6 @@ en:
     confirm_del: "You sure?"
     user:
       user_not_found: "User not found!"
-  add_answer: "Add answer"
-  remove_answer: "Remote answer"
-  profile_updated: "Profile updated"
     category:
       category_successfully: "Category create successfully!"
       category_error_create: "Something went wrong!"

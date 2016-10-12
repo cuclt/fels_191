@@ -2,7 +2,8 @@ class Category < ApplicationRecord
   has_many :lessons
   has_many :questions
 
-  validates :title, presence: true, length: {maximum: 100}
+  validates :title, presence: true, length: {maximum: 100},
+    uniqueness: {case_sensitive: false}
   validates :question_number, presence: true, inclusion: 1..20
 
   scope :newest, -> {order created_at: :desc}

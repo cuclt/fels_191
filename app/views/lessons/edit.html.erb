@@ -14,7 +14,9 @@
       <%= form_for [@category, @lesson] do |f_lesson| %>
         <div class="col-lg-12">
           <%= f_lesson.fields_for :results, @lesson.results do |f_result| %>
-            <h5><%= f_result.index + 1 %>. <%= f_result.object.question.name %></h5>
+            <h5>
+              <strong><%= f_result.index + 1 %>. <%= f_result.object.question.name %></strong>
+            </h5>
             <% f_result.object.question.answers.each do |answer| %>
               <div class="form-group col-lg-12">
                 <%= f_result.radio_button :answer_id, answer.id, checked: false %>
