@@ -2,7 +2,6 @@ class Admin::QuestionsController < ApplicationController
 
   def new
     @question = Question.new
-    3.times{@question.answers.build}
     @categories = Category.all
   end
 

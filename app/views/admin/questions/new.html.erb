@@ -8,12 +8,12 @@
       <%= f.select "category_id", options_for_select(@categories.collect{
         |category| [category.title, category.id]}),
         class: "btn btn-default filter-categories" %>
-      <%= f.fields_for :answers do |ff| %>
-        <%= ff.label t "answer_name" %>
-        <%= ff.text_field :name, class: "form-control" %>
-        <%= ff.label t "is_correct" %>
-        <%= ff.check_box :is_correct, class: "answers_checkbox" %><br>
+      <%= f.fields_for :answers do |answer_builder| %>
+        <%= render "answer_fields", f: answer_builder %>
       <% end %>
+      <div class="add_fields">
+        <%= link_to_add_fields t("add_answer"), f, :answers %>
+      </div>
       <%= f.submit t("save"), class: "btn btn-primary" %>
     <% end %>
   </div>
